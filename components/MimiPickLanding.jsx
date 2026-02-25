@@ -106,7 +106,7 @@ export default function MimiPickLanding() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.7 }}
-            className="mt-3 text-[15px] tracking-[0.32em] font-medium"
+            className="mt-3 text-[20px] tracking-[0.32em] font-medium"
             style={{ color: brandGreen }}
           >
             for SDGs
