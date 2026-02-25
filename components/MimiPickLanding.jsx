@@ -45,7 +45,7 @@ export default function MimiPickLanding() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
             viewBox="0 0 500 420"
-            className="mt-4 mb-6 w-[118px] h-auto"
+            className="mt-4 mb-14 w-[118px] h-auto"
             aria-label="mimi pick logo"
             role="img"
           >
@@ -88,7 +88,7 @@ export default function MimiPickLanding() {
             variants={container}
             initial="hidden"
             animate="visible"
-            className="flex flex-wrap justify-center"
+            className="mt-6 flex flex-wrap justify-center"
           >
             {title.split("").map((char, index) => (
               <motion.span
@@ -106,7 +106,7 @@ export default function MimiPickLanding() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.7 }}
-            className="mt-3 text-[20px] tracking-[0.32em] font-medium"
+            className="mt-4 text-[20px] tracking-[0.32em] font-medium"
             style={{ color: brandGreen }}
           >
             for SDGs
@@ -126,7 +126,7 @@ export default function MimiPickLanding() {
                 repeat: Infinity,
               }}
             >
-              <p className="text-[18px] leading-snug font-light tracking-wide text-gray-800">
+              <p className="text-[18px] leading-snug font-semibold tracking-wide text-gray-800">
                 {subtitle}
               </p>
             </motion.div>
@@ -156,3 +156,4 @@ export default function MimiPickLanding() {
     </div>
   );
 }
+
