@@ -21,8 +21,11 @@ export default function EssentialsPage() {
         Essentials 4
       </h1>
 
-      <p style={{ marginTop: 8, fontSize: 14, opacity: 0.7 }}>
-        충분함을 선택하다 · Choose enough
+      <p style={{ marginTop: 20, fontSize: 24, opacity: 1.3 }}>
+       
+        충분함을 선택하다 
+        Choose enough
+     
       </p>
 
       <div style={{ marginTop: 40, lineHeight: 2.4, fontSize: 17 }}>
