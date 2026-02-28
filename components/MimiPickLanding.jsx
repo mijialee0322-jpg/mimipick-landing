@@ -131,7 +131,28 @@ export default function MimiPickLanding() {
               </p>
             </motion.div>
           </div>
-
+{/* ✅ 원형 스마일 버튼: Next page */}
+<div className="mt-10 flex justify-center">
+  <Link href="/essentials" aria-label="Go to essentials">
+    <motion.div
+      whileHover={{ scale: 1.08 }}
+      whileTap={{ scale: 0.95 }}
+      className="h-[60px] w-[60px] rounded-full border border-[#2F4F3F] flex items-center justify-center cursor-pointer"
+    >
+      <svg width="28" height="28" viewBox="0 0 48 48">
+        <circle cx="18" cy="20" r="2" fill="#2F4F3F" />
+        <circle cx="30" cy="20" r="2" fill="#2F4F3F" />
+        <path
+          d="M14 28 Q24 36 34 28"
+          stroke="#2F4F3F"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+        />
+      </svg>
+    </motion.div>
+  </Link>
+</div>
           <div className="h-3" />
         </main>
 
@@ -158,29 +179,3 @@ export default function MimiPickLanding() {
 }
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-<div style={{ marginTop: "40px", textAlign: "center" }}>
-  <Link href="/essentials">
-    <motion.div
-      whileHover={{ scale: 1.08 }}
-      whileTap={{ scale: 0.95 }}
-      style={{
-        width: 60,
-        height: 60,
-        borderRadius: "50%",
-        border: "1px solid #2F4F3F",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        cursor: "pointer",
-        margin: "0 auto"
-      }}
-    >
-      <svg width="28" height="28" viewBox="0 0 48 48">
-        <circle cx="18" cy="20" r="2" fill="#2F4F3F"/>
-        <circle cx="30" cy="20" r="2" fill="#2F4F3F"/>
-        <path d="M14 28 Q24 36 34 28" stroke="#2F4F3F" strokeWidth="2" fill="none" strokeLinecap="round"/>
-      </svg>
-    </motion.div>
-  </Link>
-</div>
