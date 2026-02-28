@@ -177,5 +177,3 @@ export default function MimiPickLanding() {
     </div>
   );
 }
-import Link from "next/link";
-import { motion } from "framer-motion";
