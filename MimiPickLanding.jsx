@@ -131,7 +131,70 @@ export default function MimiPickLanding() {
               </p>
             </motion.div>
           </div>
+</motion.div>
+</div>
 
+{/* Draw-in Smile Button */}
+<div className="mt-10 flex justify-center">
+  <Link href="/essentials" aria-label="Go to essentials">
+    <motion.div
+      className="h-[64px] w-[64px] rounded-full flex items-center justify-center cursor-pointer"
+      whileHover={{ scale: 1.06 }}
+      whileTap={{ scale: 0.96 }}
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <motion.svg width="64" height="64" viewBox="0 0 72 72" fill="none">
+
+        <motion.circle
+          cx="36"
+          cy="36"
+          r="26"
+          stroke={brandGreen}
+          strokeWidth="1.6"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 1 }}
+          transition={{ duration: 1.0 }}
+        />
+
+        <motion.circle
+          cx="30"
+          cy="34"
+          r="1.8"
+          fill={brandGreen}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.7 }}
+        />
+
+        <motion.circle
+          cx="42"
+          cy="34"
+          r="1.8"
+          fill={brandGreen}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.75 }}
+        />
+
+        <motion.path
+          d="M28 41 Q36 48 44 41"
+          stroke={brandGreen}
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ delay: 0.85, duration: 0.8 }}
+        />
+
+      </motion.svg>
+    </motion.div>
+  </Link>
+</div>
+
+<div className="h-3" />
           <div className="h-3" />
         </main>
 
