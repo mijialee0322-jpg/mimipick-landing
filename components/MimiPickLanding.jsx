@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const title = "MIMI PICK";
@@ -112,48 +113,47 @@ export default function MimiPickLanding() {
             for SDGs
           </motion.p>
 
-          <div className="flex-1 flex items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{
-                opacity: [0, 1, 1, 0],
-                y: [10, 0, 0, -10],
-              }}
-              transition={{
-                duration,
-                times: [0, t1, t2, 1],
-                ease: "easeInOut",
-                repeat: Infinity,
-              }}
-            >
-              <p className="text-[18px] leading-snug font-semibold tracking-wide text-gray-800">
-                {subtitle}
-              </p>
-            </motion.div>
+          {/* ✅ Coming 문구: 중앙 고정 대신 여백으로 배치 */}
+          <motion.div
+            className="mt-16"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: [0, 1, 1, 0], y: [10, 0, 0, -10] }}
+            transition={{
+              duration,
+              times: [0, t1, t2, 1],
+              ease: "easeInOut",
+              repeat: Infinity,
+            }}
+          >
+            <p className="text-[18px] leading-snug font-semibold tracking-wide text-gray-800">
+              {subtitle}
+            </p>
+          </motion.div>
+
+          {/* ✅ 원형 스마일 버튼: Coming 바로 아래 */}
+          <div className="mt-10 flex justify-center">
+            <Link href="/essentials" aria-label="Go to essentials">
+              <motion.div
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.95 }}
+                className="h-[60px] w-[60px] rounded-full border border-[#2F4F3F] flex items-center justify-center cursor-pointer"
+              >
+                <svg width="28" height="28" viewBox="0 0 48 48">
+                  <circle cx="18" cy="20" r="2" fill="#2F4F3F" />
+                  <circle cx="30" cy="20" r="2" fill="#2F4F3F" />
+                  <path
+                    d="M14 28 Q24 36 34 28"
+                    stroke="#2F4F3F"
+                    strokeWidth="2"
+                    fill="none"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </motion.div>
+            </Link>
           </div>
-{/* ✅ 원형 스마일 버튼: Next page */}
-<div className="mt-10 flex justify-center">
-  <Link href="/essentials" aria-label="Go to essentials">
-    <motion.div
-      whileHover={{ scale: 1.08 }}
-      whileTap={{ scale: 0.95 }}
-      className="h-[60px] w-[60px] rounded-full border border-[#2F4F3F] flex items-center justify-center cursor-pointer"
-    >
-      <svg width="28" height="28" viewBox="0 0 48 48">
-        <circle cx="18" cy="20" r="2" fill="#2F4F3F" />
-        <circle cx="30" cy="20" r="2" fill="#2F4F3F" />
-        <path
-          d="M14 28 Q24 36 34 28"
-          stroke="#2F4F3F"
-          strokeWidth="2"
-          fill="none"
-          strokeLinecap="round"
-        />
-      </svg>
-    </motion.div>
-  </Link>
-</div>
-          <div className="h-3" />
+
+          <div className="h-6" />
         </main>
 
         <footer
