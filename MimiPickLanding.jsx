@@ -134,7 +134,7 @@ export default function MimiPickLanding() {
 </motion.div>
 </div>
 
-{/* Draw-in Smile Button */}
+{/* ✅ Draw-in Smile Button (more visible) */}
 <div className="mt-10 flex justify-center">
   <Link href="/essentials" aria-label="Go to essentials">
     <motion.div
@@ -146,54 +146,80 @@ export default function MimiPickLanding() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.svg width="64" height="64" viewBox="0 0 72 72" fill="none">
-
+        {/* 원: 더 또렷한 드로잉 */}
         <motion.circle
           cx="36"
           cy="36"
           r="26"
           stroke={brandGreen}
-          strokeWidth="1.6"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          fill="none"
           initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 1 }}
-          transition={{ duration: 1.0 }}
+          animate={{ pathLength: [0, 1, 1], opacity: [0, 1, 1] }}
+          transition={{
+            duration: 1.1,
+            ease: "easeInOut",
+            times: [0, 0.7, 1],
+            repeat: Infinity,
+            repeatDelay: 1.2,
+          }}
         />
 
+        {/* 눈: 톡 등장 */}
         <motion.circle
           cx="30"
           cy="34"
-          r="1.8"
+          r="2"
           fill={brandGreen}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.7 }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: [0, 1, 1], opacity: [0, 1, 1] }}
+          transition={{
+            delay: 0.75,
+            duration: 0.25,
+            ease: "easeOut",
+            repeat: Infinity,
+            repeatDelay: 2.05,
+          }}
         />
-
         <motion.circle
           cx="42"
           cy="34"
-          r="1.8"
+          r="2"
           fill={brandGreen}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.75 }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: [0, 1, 1], opacity: [0, 1, 1] }}
+          transition={{
+            delay: 0.85,
+            duration: 0.25,
+            ease: "easeOut",
+            repeat: Infinity,
+            repeatDelay: 2.05,
+          }}
         />
 
+        {/* 스마일: 마지막에 그려짐 */}
         <motion.path
           d="M28 41 Q36 48 44 41"
           stroke={brandGreen}
-          strokeWidth="2"
+          strokeWidth="2.4"
           fill="none"
           strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ delay: 0.85, duration: 0.8 }}
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: [0, 1, 1], opacity: [0, 1, 1] }}
+          transition={{
+            delay: 1.0,
+            duration: 0.9,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 1.2,
+          }}
         />
-
       </motion.svg>
     </motion.div>
   </Link>
 </div>
-
+     
 <div className="h-3" />
           <div className="h-3" />
         </main>
