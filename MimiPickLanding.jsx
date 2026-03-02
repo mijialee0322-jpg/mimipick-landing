@@ -133,36 +133,64 @@ export default function MimiPickLanding() {
             </motion.div>
           </div>
 
-          {/* ✅ 드로잉 스마일 버튼 (여기가 정확한 위치) */}
-          <div className="mt-10 flex justify-center">
-            <Link href="/about" aria-label="Go to brand story">
-              <motion.div
-                className="h-[64px] w-[64px] rounded-full flex items-center justify-center cursor-pointer"
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.96 }}
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
-                <motion.svg width="64" height="64" viewBox="0 0 72 72" fill="none">
-                  <motion.circle
-                    cx="36"
-                    cy="36"
-                    r="26"
-                    stroke={brandGreen}
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    fill="none"
-                    initial={{ pathLength: 0, opacity: 0 }}
-                    animate={{ pathLength: [0, 1, 1], opacity: [0, 1, 1] }}
-                    transition={{
-                      duration: 1.1,
-                      ease: "easeInOut",
-                      times: [0, 0.7, 1],
-                      repeat: Infinity,
-                      repeatDelay: 1.2,
-                    }}
-                  />
+        {/* ✅ 드로잉 스마일 버튼 (확실히 움직이는 버전) */}
+<div className="mt-10 flex justify-center">
+  <Link href="/about" aria-label="Go to brand story">
+    <motion.div
+      className="h-[64px] w-[64px] rounded-full flex items-center justify-center cursor-pointer"
+      animate={{ scale: [1, 1.05, 1] }}
+      transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+    >
+      <motion.svg width="64" height="64" viewBox="0 0 72 72" fill="none">
+        {/* 원: 계속 그렸다가 사라짐 */}
+        <motion.circle
+          cx="36"
+          cy="36"
+          r="26"
+          stroke={brandGreen}
+          strokeWidth="2.4"
+          strokeLinecap="round"
+          fill="none"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: [0, 1, 0], opacity: [0, 1, 0] }}
+          transition={{ duration: 2.0, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        {/* 눈: 깜빡이는 느낌 */}
+        <motion.circle
+          cx="30"
+          cy="34"
+          r="2"
+          fill={brandGreen}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }}
+          transition={{ duration: 2.0, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+        />
+        <motion.circle
+          cx="42"
+          cy="34"
+          r="2"
+          fill={brandGreen}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }}
+          transition={{ duration: 2.0, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+        />
+
+        {/* 스마일: 계속 그렸다가 사라짐 */}
+        <motion.path
+          d="M28 41 Q36 48 44 41"
+          stroke={brandGreen}
+          strokeWidth="2.6"
+          fill="none"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: [0, 1, 0], opacity: [0, 1, 0] }}
+          transition={{ duration: 2.0, repeat: Infinity, ease: "easeInOut", delay: 0.55 }}
+        />
+      </motion.svg>
+    </motion.div>
+  </Link>
+</div>
 
                   <motion.circle
                     cx="30"
