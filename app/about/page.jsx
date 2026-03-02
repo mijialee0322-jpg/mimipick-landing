@@ -32,17 +32,7 @@ export default function AboutPage() {
             ← Back
           </a>
 
-          <a
-            href="/essentials"
-            className="text-sm opacity-80 hover:opacity-100 transition"
-          >
-            Essentials 5 →
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
+         
 <div className="mt-16 text-center">
   <Link
     href="/essentials"
