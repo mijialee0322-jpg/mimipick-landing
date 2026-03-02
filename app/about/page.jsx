@@ -2,7 +2,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#F6F4EF] text-[#2F4F3F] px-6 py-24">
       <div className="max-w-3xl mx-auto text-center">
-
         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
           Mimi Pick is enough.
         </h1>
@@ -40,7 +39,6 @@ export default function AboutPage() {
             Essentials 5 →
           </a>
         </div>
-
       </div>
     </div>
   );
