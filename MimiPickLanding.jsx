@@ -133,60 +133,15 @@ export default function MimiPickLanding() {
             </motion.div>
           </div>
 
-        {/* ✅ 드로잉 스마일 버튼 (확실히 움직이는 버전) */}
+       {/* ✅ 드로잉 스마일 버튼 */}
 <div className="mt-10 flex justify-center">
   <Link href="/about" aria-label="Go to brand story">
-    <motion.div
-      className="h-[64px] w-[64px] rounded-full flex items-center justify-center cursor-pointer"
-      animate={{ scale: [1, 1.05, 1] }}
-      transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-    >
+    <motion.div className="h-[64px] w-[64px] rounded-full flex items-center justify-center cursor-pointer">
       <motion.svg width="64" height="64" viewBox="0 0 72 72" fill="none">
-        {/* 원: 계속 그렸다가 사라짐 */}
-        <motion.circle
-          cx="36"
-          cy="36"
-          r="26"
-          stroke={brandGreen}
-          strokeWidth="2.4"
-          strokeLinecap="round"
-          fill="none"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: [0, 1, 0], opacity: [0, 1, 0] }}
-          transition={{ duration: 2.0, repeat: Infinity, ease: "easeInOut" }}
-        />
-
-        {/* 눈: 깜빡이는 느낌 */}
-        <motion.circle
-          cx="30"
-          cy="34"
-          r="2"
-          fill={brandGreen}
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }}
-          transition={{ duration: 2.0, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-        />
-        <motion.circle
-          cx="42"
-          cy="34"
-          r="2"
-          fill={brandGreen}
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }}
-          transition={{ duration: 2.0, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
-        />
-
-        {/* 스마일: 계속 그렸다가 사라짐 */}
-        <motion.path
-          d="M28 41 Q36 48 44 41"
-          stroke={brandGreen}
-          strokeWidth="2.6"
-          fill="none"
-          strokeLinecap="round"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: [0, 1, 0], opacity: [0, 1, 0] }}
-          transition={{ duration: 2.0, repeat: Infinity, ease: "easeInOut", delay: 0.55 }}
-        />
+        <motion.circle ... />
+        <motion.circle ... />
+        <motion.circle ... />
+        <motion.path ... />
       </motion.svg>
     </motion.div>
   </Link>
