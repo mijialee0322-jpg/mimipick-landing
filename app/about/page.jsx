@@ -43,3 +43,11 @@ export default function AboutPage() {
     </div>
   );
 }
+<div className="mt-16 text-center">
+  <Link
+    href="/essentials"
+    className="text-[#2F4F3F] opacity-70 hover:opacity-100 transition"
+  >
+    Essentials 5 →
+  </Link>
+</div>
