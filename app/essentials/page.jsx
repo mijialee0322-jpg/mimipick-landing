@@ -29,20 +29,20 @@ function pointsToString(pts) {
 
 export default function EssentialsPage() {
   const year = new Date().getFullYear();
-
   const polygonPoints = pointsToString(PTS);
 
   return (
     <div className="min-h-screen bg-[#F6F4EF] text-[#2F4F3F] px-6 py-20">
       <div className="max-w-3xl mx-auto text-center">
-        {/* Back */}
         <div className="text-center">
-          <Link href="/about" className="text-sm opacity-60 hover:opacity-100 transition">
+          <Link
+            href="/about"
+            className="text-sm opacity-60 hover:opacity-100 transition"
+          >
             ← Back
           </Link>
         </div>
 
-        {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,7 +57,6 @@ export default function EssentialsPage() {
           </h1>
         </motion.div>
 
-        {/* Pentagon */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -65,7 +64,6 @@ export default function EssentialsPage() {
           className="mt-14 flex justify-center"
         >
           <svg width="300" height="300" viewBox="0 0 300 300">
-            {/* Draw line */}
             <motion.polygon
               points={polygonPoints}
               fill="none"
@@ -77,7 +75,6 @@ export default function EssentialsPage() {
               transition={{ duration: 1.1, ease: "easeInOut" }}
             />
 
-            {/* Center */}
             <motion.g
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
@@ -105,7 +102,6 @@ export default function EssentialsPage() {
               </text>
             </motion.g>
 
-            {/* Labels */}
             {labels.map((l, i) => (
               <motion.g
                 key={l.kr}
@@ -142,7 +138,6 @@ export default function EssentialsPage() {
           </svg>
         </motion.div>
 
-        {/* Short explanation */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
