@@ -132,7 +132,7 @@ export default function MimiPickLanding() {
 
           {/* ✅ 원형 스마일 버튼: Coming 바로 아래 */}
           <div className="mt-10 flex justify-center">
-            <Link href="/essentials" aria-label="Go to essentials">
+            <Link href="/about" aria-label="Go to about">
               <motion.div
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
