@@ -41,3 +41,7 @@ export default function AboutPage() {
     Essentials 5 →
   </Link>
 </div>
+</div>
+</div>
+  );
+}
