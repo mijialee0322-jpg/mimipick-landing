@@ -133,15 +133,70 @@ export default function MimiPickLanding() {
             </motion.div>
           </div>
 
-       {/* ✅ 드로잉 스마일 버튼 */}
+      {/* ✅ 드로잉 스마일 버튼 */}
 <div className="mt-10 flex justify-center">
   <Link href="/about" aria-label="Go to brand story">
-    <motion.div className="h-[64px] w-[64px] rounded-full flex items-center justify-center cursor-pointer">
+    <motion.div
+      className="h-[64px] w-[64px] rounded-full flex items-center justify-center cursor-pointer"
+      whileHover={{ scale: 1.06 }}
+      whileTap={{ scale: 0.96 }}
+    >
       <motion.svg width="64" height="64" viewBox="0 0 72 72" fill="none">
-        <motion.circle ... />
-        <motion.circle ... />
-        <motion.circle ... />
-        <motion.path ... />
+        <motion.circle
+          cx="36"
+          cy="36"
+          r="26"
+          stroke={brandGreen}
+          strokeWidth="2.4"
+          strokeLinecap="round"
+          fill="none"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: [0, 1, 0], opacity: [0, 1, 0] }}
+          transition={{ duration: 2.0, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.circle
+          cx="30"
+          cy="34"
+          r="2"
+          fill={brandGreen}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }}
+          transition={{
+            duration: 2.0,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.3,
+          }}
+        />
+        <motion.circle
+          cx="42"
+          cy="34"
+          r="2"
+          fill={brandGreen}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }}
+          transition={{
+            duration: 2.0,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.4,
+          }}
+        />
+        <motion.path
+          d="M28 41 Q36 48 44 41"
+          stroke={brandGreen}
+          strokeWidth="2.6"
+          fill="none"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: [0, 1, 0], opacity: [0, 1, 0] }}
+          transition={{
+            duration: 2.0,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.55,
+          }}
+        />
       </motion.svg>
     </motion.div>
   </Link>
