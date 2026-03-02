@@ -39,13 +39,13 @@ export default function AboutPage() {
           <p className="mt-4 text-base leading-relaxed opacity-70">
             우리는 더 많은 선택을 제안하지 않습니다.
             <br />
-            하나의 충분한 선택을 제안합니다.
+            하나의 에센셜로 충분한 선택을 제안합니다.
           </p>
 
           <p className="mt-6 text-sm leading-relaxed opacity-60">
             We don’t propose more choices.
             <br />
-            We offer one sufficient choice.
+            We offer one sufficient essential.
           </p>
         </motion.div>
 
