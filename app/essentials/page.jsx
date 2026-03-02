@@ -69,7 +69,7 @@ export default function PrinciplesPage() {
           className="text-center mt-10"
         >
           <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
-            Mimi Pick is enough.
+           5 essentials
           </h1>
           <p className="mt-5 text-lg opacity-70">
             We choose not by trends, but by principles.
