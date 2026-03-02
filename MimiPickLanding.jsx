@@ -202,59 +202,7 @@ export default function MimiPickLanding() {
   </Link>
 </div>
 
-                  <motion.circle
-                    cx="30"
-                    cy="34"
-                    r="2"
-                    fill={brandGreen}
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: [0, 1, 1], opacity: [0, 1, 1] }}
-                    transition={{
-                      delay: 0.75,
-                      duration: 0.25,
-                      ease: "easeOut",
-                      repeat: Infinity,
-                      repeatDelay: 2.05,
-                    }}
-                  />
-                  <motion.circle
-                    cx="42"
-                    cy="34"
-                    r="2"
-                    fill={brandGreen}
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: [0, 1, 1], opacity: [0, 1, 1] }}
-                    transition={{
-                      delay: 0.85,
-                      duration: 0.25,
-                      ease: "easeOut",
-                      repeat: Infinity,
-                      repeatDelay: 2.05,
-                    }}
-                  />
-
-                  <motion.path
-                    d="M28 41 Q36 48 44 41"
-                    stroke={brandGreen}
-                    strokeWidth="2.4"
-                    fill="none"
-                    strokeLinecap="round"
-                    initial={{ pathLength: 0, opacity: 0 }}
-                    animate={{ pathLength: [0, 1, 1], opacity: [0, 1, 1] }}
-                    transition={{
-                      delay: 1.0,
-                      duration: 0.9,
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                      repeatDelay: 1.2,
-                    }}
-                  />
-                </motion.svg>
-              </motion.div>
-            </Link>
-          </div>
-
-          <div className="h-3" />
+          <div className="h-3" />        
           <div className="h-3" />
         </main>
 
